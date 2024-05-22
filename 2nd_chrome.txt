@@ -1,0 +1,41 @@
+Server
+
+router/get/
+router/get/:room  0db949a3-d42d-4e5d-b93c-1e6494c08243
+router/connection
+router/join-room  0db949a3-d42d-4e5d-b93c-1e6494c08243 5aee9e00-aae3-48a8-87c0-880d892a9dd9
+
+PEER: Client connected: 5aee9e00-aae3-48a8-87c0-880d892a9dd9
+
+1st join
+
+roomejs/ROOM_ID 0db949a3-d42d-4e5d-b93c-1e6494c08243
+script/myPeer/open  0db949a3-d42d-4e5d-b93c-1e6494c08243 5aee9e00-aae3-48a8-87c0-880d892a9dd9
+script/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/addVideoStream/loadedmetadata
+
+...second joining
+
++ Server
+
+router/get/:room  0db949a3-d42d-4e5d-b93c-1e6494c08243
+router/connection
+router/join-room  0db949a3-d42d-4e5d-b93c-1e6494c08243 121c5ee9-8809-480b-ba26-74a67b9fb9c9
+
+PEER: Client connected: 121c5ee9-8809-480b-ba26-74a67b9fb9c9
+
++ 1st
+
+script/myPeer/user-connected  121c5ee9-8809-480b-ba26-74a67b9fb9c9
+script/connectToNewUser/initial  121c5ee9-8809-480b-ba26-74a67b9fb9c9
+
+2nd
+
+roomejs/ROOM_ID 0db949a3-d42d-4e5d-b93c-1e6494c08243
+script/myPeer/open  0db949a3-d42d-4e5d-b93c-1e6494c08243 121c5ee9-8809-480b-ba26-74a67b9fb9c9
+script/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/addVideoStream/loadedmetadata

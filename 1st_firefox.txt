@@ -1,0 +1,57 @@
+Server
+
+router/get/
+router/get/:room  cabf925d-a744-4074-a496-928fe4a17221
+router/connection
+router/join-room  cabf925d-a744-4074-a496-928fe4a17221 a6afd8b6-5be5-44b5-9396-896f15e3e2b2
+
+PEER: Client connected: a6afd8b6-5be5-44b5-9396-896f15e3e2b2
+
+1st join
+
+roomejs/ROOM_ID cabf925d-a744-4074-a496-928fe4a17221
+script/myPeer/open  cabf925d-a744-4074-a496-928fe4a17221 a6afd8b6-5be5-44b5-9396-896f15e3e2b2
+script/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/addVideoStream/loadedmetadata
+
+...second joining
+
++ Server
+
+router/get/:room  cabf925d-a744-4074-a496-928fe4a17221
+router/connection
+router/join-room  cabf925d-a744-4074-a496-928fe4a17221 6ffe1ef4-878b-4d8d-87d4-325852bb8a2b
+
+PEER: Client connected: 6ffe1ef4-878b-4d8d-87d4-325852bb8a2b
+
++ 1st
+
+script/myPeer/user-connected  6ffe1ef4-878b-4d8d-87d4-325852bb8a2b
+script/connectToNewUser/initial  6ffe1ef4-878b-4d8d-87d4-325852bb8a2b
+script/connectToNewUser/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/connectToNewUser/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/addVideoStream/loadedmetadata
+
+2nd
+
+roomejs/ROOM_ID cabf925d-a744-4074-a496-928fe4a17221
+script/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/addVideoStream/loadedmetadata
+script/myPeer/open  cabf925d-a744-4074-a496-928fe4a17221 6ffe1ef4-878b-4d8d-87d4-325852bb8a2b
+
+script/myPeer/call
+script/myPeer/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/myPeer/stream
+script/addVideoStream/initial
+script/addVideoStream/append
+script/addVideoStream/loadedmetadata
